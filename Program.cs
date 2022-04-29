@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Jon Connell, CSE210 Section 3
+// Unit01 Prove - Tic Tac Toe
+
+using System;
 
 namespace TicTacToe
 {
