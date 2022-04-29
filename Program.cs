@@ -12,6 +12,7 @@ namespace TicTacToe
             // Initialize variables for gameplay
             char current_turn = 'x';
             bool game_over = false;
+            int tie_counter = 0;
 
             // Create and display starting game board
             List<char> board = new List<char> {'1', '2', '3', '4', '5', '6', '7', '8', '9'};
@@ -37,6 +38,13 @@ namespace TicTacToe
                 // If game is not over, change turn
                 if (game_over == false)
                 {
+                    // Count number of turns to check for tie
+                    tie_counter++;
+                    if (tie_counter == 9)
+                    {
+                        game_over = true;
+                        Console.WriteLine("\nGame tied! Thanks for playing.\n");
+                    }
                     if (current_turn == 'x')
                     {
                         current_turn = 'o';
